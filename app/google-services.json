@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "693765002575",
+    "firebase_url": "https://matchhub-cb1f0.firebaseio.com",
+    "project_id": "matchhub-cb1f0",
+    "storage_bucket": "matchhub-cb1f0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:693765002575:android:8c89ba700c32cabd53613a",
+        "android_client_info": {
+          "package_name": "com.matchhub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "693765002575-ophda40bpvejp01ca5di4mjdil2t4stj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.matchhub",
+            "certificate_hash": "3b6e1ee6d759c27f9e9a5ceefac67e74ea310b0e"
+          }
+        },
+        {
+          "client_id": "693765002575-juo6gri2act7s4niinia6fa3aphq4sq4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAg9coSLhZCo81n0SRbwZQGNoucomtWPsQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "693765002575-juo6gri2act7s4niinia6fa3aphq4sq4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
