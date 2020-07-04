@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
+import android.widget.EditText;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,9 +17,10 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
 
-public class RegisterGenderActivity extends AppCompatActivity {
+public class RegisterNameActivity extends AppCompatActivity {
 
-    Button genderMaleBtn, genderFemaleBtn, nextBtn;
+    EditText nameET;
+    Button nextBtn;
     Context context = this;
 
     //firebase
@@ -28,15 +29,14 @@ public class RegisterGenderActivity extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
 
-    String gender;
+    String name;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register_gender);
+        setContentView(R.layout.activity_register_name);
 
-        genderMaleBtn = findViewById(R.id.genderMaleBtn);
-        genderFemaleBtn = findViewById(R.id.genderFemaleBtn);
+        nameET = findViewById(R.id.nameET);
         nextBtn = findViewById(R.id.nextBtn);
 
         //init firabase
@@ -45,36 +45,18 @@ public class RegisterGenderActivity extends AppCompatActivity {
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("Users");
 
-        //change gender as male on db
-        genderMaleBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                gender= "Male";
-                HashMap<String, Object> result = new HashMap<>();
-                result.put("gender", gender);
-
-                databaseReference.child(user.getUid()).updateChildren(result);
-
-            }
-        });
-
-        //change gender as female on db
-        genderFemaleBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                gender= "Female";
-                HashMap<String, Object> result = new HashMap<>();
-                result.put("gender", gender);
-
-                databaseReference.child(user.getUid()).updateChildren(result);
-
-            }
-        });
 
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, RegisterBirthdayActivity.class);
+
+                //database
+                name = nameET.getText().toString().trim();
+                HashMap<String, Object> result = new HashMap<>();
+                result.put("name", name);
+                databaseReference.child(user.getUid()).updateChildren(result);
+
+                Intent intent = new Intent(context, MainActivity.class);
                 startActivity(intent);
             }
         });

@@ -11,8 +11,9 @@
         android:theme="@style/AppTheme">
         <activity android:name=".RegisterActivity"></activity>
         <activity android:name=".RegisterGenderActivity" />
-        <activity android:name=".MainActivity" />
         <activity android:name=".RegisterBirthdayActivity" />
+        <activity android:name=".RegisterNameActivity" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".LoginRegistrationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

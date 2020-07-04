@@ -2,33 +2,23 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="50dp">
-
-    <Button
-        android:id="@+id/backBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="geri"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"/>
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="50dp"
+    tools:context=".RegisterNameActivity">
 
     <TextView
-        android:id="@+id/birthdateTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Doğum tarihiniz"
+        android:text="Adınız ve soyadınız"
         android:textSize="25sp"
         android:textStyle="bold"
-        android:layout_marginTop="60dp"/>
-
-    <TextView
-        android:id="@+id/birthdate"
+        android:layout_marginTop="40dp"/>
+    <EditText
+        android:id="@+id/nameET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/birthdateTV"
-        android:layout_marginTop="100dp"
-        android:textSize="30sp"
-        android:gravity="center_horizontal" />
+        android:layout_centerVertical="true"
+        android:hint="Adınız ve soyadınız"/>
 
     <Button
         android:id="@+id/nextBtn"
